@@ -19,7 +19,7 @@
 
 # reverse k positions
 array = [-2,3,1,4,6,2,8,7,9,3]
-k = 11
+k = 1
 def reverse(array,start,end):
 	while(start < end):
 		array[start],array[end] = array[end],array[start]
