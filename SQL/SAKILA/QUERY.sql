@@ -35,3 +35,5 @@ JOIN store AS ST
 ON SF.store_id = ST.store_id
 JOIN address AS AD
 ON ST.address_id = AD.address_id;
+
+CREATE INDEX idx_title	ON film(title);
