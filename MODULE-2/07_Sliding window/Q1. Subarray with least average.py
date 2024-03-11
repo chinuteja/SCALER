@@ -18,10 +18,10 @@ among all subarrays of size 3.
 
 def solve(A,k):
 
-	avg = 0
+	sum_,avg = 0,0
 	for i in range(k):
-		avg += A[i]
-	
+		sum_ += A[i]
+	sum_ = avg/k
 
 	answer = avg 
 	
@@ -29,7 +29,7 @@ def solve(A,k):
 	e = k
 	min_index = 0
 	while (e < len(A)):
-		avg = avg - A[s-1] + A[e]
+		avg = (avg/k) - (A[s-1]/k) + (A[e]/k)
 		
 		if answer > avg:
 			answer = avg
