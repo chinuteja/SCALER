@@ -37,4 +37,5 @@ class Solution:
         return count
 sol = Solution()
 A = [1, -1, -2, 2]
+# A = [1,1]
 print(sol.solve_new(A))

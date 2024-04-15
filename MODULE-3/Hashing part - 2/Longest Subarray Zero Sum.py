@@ -40,3 +40,21 @@ A = [1,-1,2,-2,3,-1,4,-3]
 # A = [1, -2, 1, 2]
 
 print(sol.solve(A))
+
+
+####
+def solve(A):
+    pref = {}
+    curr = 0
+    pref[0] = 0
+    ans = 0
+    for i in range(1,len(A) + 1):
+        curr += A[i - 1]
+        if curr in pref:
+            ans = max(ans, i - pref[curr])
+        else:
+            pref[curr] = i
+    return ans
+
+A = [1, -2, 1, 2]
+print(solve(A))
