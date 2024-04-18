@@ -63,5 +63,3 @@ sol = Solution()
 A = [3, 11, -1, 5]
 print(sol.solve(A))
 
-
-
